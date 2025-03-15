@@ -1,2 +1,6 @@
+"""Sample module"""
+
+
 def main() -> None:
-    print("Hello from {{ cookiecutter.project_name }}!")
+    """Sample main function"""
+    print("Hello from myproject!")

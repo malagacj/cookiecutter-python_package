@@ -13,7 +13,7 @@ dependencies = []
 {{ cookiecutter.project_name }} = "{{ cookiecutter.project_name }}:main"
 
 [project.optional-dependencies]
-dev = ["black", "flake8", "pylint", "pytest"]
+dev = ["build", "black", "flake8", "pylint", "pytest"]
 
 [build-system]
 requires = ["hatchling", "hatch-vcs"]
@@ -24,3 +24,9 @@ source = "vcs"
 
 [tool.black]
 line-length = 79
+
+[tool.pytest.ini_options]
+pythonpath = [
+    "./src"
+]
+
