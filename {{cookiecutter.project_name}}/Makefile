@@ -8,7 +8,7 @@ SHELL := /bin/bash
 
 # Variables
 VENV_DIR = .venv
-PYTHON_VERSION = python{{ cookiecutter.python_version }}
+PYTHON_VERSION = python{{ cookiecutter.python_version.split('.')[:2] | join('.') }}
 BIN = $(VENV_DIR)/bin
 
 LINT_DIRECTORIES = ./{src,tests}

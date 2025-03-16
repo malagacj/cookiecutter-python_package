@@ -1,6 +1,8 @@
 {
     "project_name": "myproject",
-    "python_version": "3.10",
+    "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+    "pkg_name": "{{ cookiecutter.project_slug|replace('-', '') }}",
+    "python_version": "3.10.16",
     "author_name": "Default User",
     "author_email": "default@example.com"
 }

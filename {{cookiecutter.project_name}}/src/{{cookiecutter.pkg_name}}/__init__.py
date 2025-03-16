@@ -3,4 +3,4 @@
 
 def main() -> None:
     """Sample main function"""
-    print("Hello from myproject!")
+    print("Hello from {{ cookiecutter.pkg_name }}!")

@@ -1,5 +1,5 @@
 [project]
-name = "{{ cookiecutter.project_name }}"
+name = "{{ cookiecutter.pkg_name }}"
 dynamic = ["version"]
 description = "Add your description here"
 readme = "README.md"
@@ -10,7 +10,7 @@ requires-python = ">={{ cookiecutter.python_version }}"
 dependencies = []
 
 [project.scripts]
-{{ cookiecutter.project_name }} = "{{ cookiecutter.project_name }}:main"
+{{ cookiecutter.pkg_name }} = "{{ cookiecutter.pkg_name }}:main"
 
 [project.optional-dependencies]
 dev = ["build", "black", "flake8", "pylint", "pytest"]
