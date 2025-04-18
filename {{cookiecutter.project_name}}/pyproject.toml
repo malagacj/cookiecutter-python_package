@@ -13,7 +13,8 @@ dependencies = []
 {{ cookiecutter.pkg_name }} = "{{ cookiecutter.pkg_name }}:main"
 
 [project.optional-dependencies]
-dev = ["build", "black", "flake8", "pylint", "pytest"]
+dev = ["build", "black", "flake8", "pylint", "pytest", "pytest-cov"]
+sec = ["bandit", "safety", "pip-audit"]
 
 [build-system]
 requires = ["hatchling", "hatch-vcs"]
@@ -26,7 +27,8 @@ source = "vcs"
 line-length = 79
 
 [tool.pytest.ini_options]
+addopts ="--cov=src --cov-report=html"
+testpaths = ["tests"]
 pythonpath = [
-    "./src"
+    "."
 ]
-
